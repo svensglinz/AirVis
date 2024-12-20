@@ -1,5 +1,6 @@
 # AirBnBVis - An interactive visualization of Zurich's AirBnB rentals 
 
+This website is currently hosted ![here](https://fp-p21.fwe24.ivia.ch/) 
 ## Description: 
 
 Our project aims to give a quick overview over Zurich's AirBnB market. 
