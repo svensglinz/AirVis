@@ -1,0 +1,390 @@
+/* ================= HEADER BAR ====================*/
+
+*:root {
+    --header-height: 70px;
+}
+
+header {
+    place-content: center;
+    height: var(--header-height);
+    padding: 5px;
+    position: sticky;
+    border-bottom: 1px solid grey;
+    background-color: rgba(255, 252, 252, 0.5);
+    color: grey;
+    align-items: center;
+    text-align: center;
+
+    & ul {
+        height: 100%;
+        place-items: center;
+    }
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    place-content: center;
+
+    & .menu-icon:hover {
+        cursor: pointer;
+    }
+}
+
+& li {
+    margin-right: 10px;
+}
+
+/* ================= COUNTER ELEMENT ====================*/
+.counterButton {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counterButton:hover {
+    border: 1px solid black;
+}
+
+/* ================= RANGE SLIDER ====================*/
+
+.range-slider {
+    margin: auto;
+    height: 5px;
+    position: relative;
+    background-color: #e1e9f6;
+    border-radius: 2px;
+}
+
+.range-selected {
+    height: 100%;
+    right: 30%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #1b53c0;
+}
+
+.range-input {
+    margin: auto;
+    position: relative;
+}
+
+.range .labels {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.range .labels input {
+    padding: 5px;
+    text-align: center;
+    width: 55px;
+    border-radius: 20px;
+}
+
+.range .labels input:focus {
+    border-color: black;
+}
+
+.range .labels label {
+    font-size: 15px;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -7px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.range-input input::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+.range-input input::-moz-range-thumb {
+    height: 30px;
+    width: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: #fff;
+    pointer-events: auto;
+    -moz-appearance: none;
+}
+
+.range-price {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Remove spinners in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove spinners in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.custom-dot {
+    background-color: red; /* Change this to any color */
+    border-radius: 50%; /* Make it a circle */
+    width: 10px; /* Width of the dot */
+    height: 10px; /* Height of the dot */
+    border: 1px solid white; /* Optional: Add a border for better visibility */
+}
+
+/* ================= OPTION BUTTON ====================*/
+.optionButton:hover {
+
+    border: 1px solid black !important;
+}
+
+.optionButton {
+    transition: border 0.1s ease-in-out !important;
+}
+
+/* ================== TOGGLE FILTER =========================*/
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+
+    & .btn-group {
+        position: relative !important;
+        border: 1px solid lightgray;
+        padding: 5px;
+    }
+
+    & button {
+        padding: 10px;
+        border: none !important;
+    }
+
+    & button:focus {
+        border: none !important;
+    }
+
+    & button:active {
+        border: none !important;
+    }
+}
+
+.toggle-button {
+    flex: 1 !important;
+}
+
+.toggle-slider {
+    top: 6px;
+    left: 4px;
+    width: calc(33.33% - 3px); /* Adjust based on the number of options */
+    height: 80%;
+    background-color: #f8f9fa; /* Same color as Bootstrap light */
+    border: 1px solid #ced4da; /* Matches outline color */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth sliding */
+    z-index: 0;
+}
+
+/* ================= SIDE BAR ====================*/
+
+.sidebar {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sidebar.visible {
+    transform: translateX(0);
+    transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.sidebar.hidden {
+    width: 0 !important;
+    padding: 0 !important;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in-out, width 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* ================= VIZ BAR ====================*/
+
+.vizbar {
+    overflow-y: scroll;
+}
+
+.vizbar.visible {
+    transform: translateX(0);
+    transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.vizbar.hidden {
+    width: 0 !important;
+    padding: 0 !important;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in-out, width 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* ================= ACTION BUTTON ====================*/
+
+/* Base styles for the App */
+.actionButton {
+    left: 20px;
+    bottom: 30px;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    z-index: 10000;
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.fab:hover {
+    background-color: #0056b3;
+}
+
+/* Menu container becomes visible when the FAB is clicked */
+.fab-menu.open {
+    width: 180px; /* width of expanded menu */
+    height: 70px;
+    z-index: 10000;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Expandable menu container */
+.fab-menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 80px; /* Position it above the FAB */
+    left: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.actionButton hr {
+    padding: 0;
+    margin: 5px;
+}
+/* Menu options inside the expanded menu */
+.fab-menu-options {
+    background-color: #f0f0f0;
+    height: 100%;
+    place-content: center;
+    text-align: center;
+    place-items: center;
+    justify-content: space-around; /* Distribute space evenly between the buttons */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fab-menu-item {
+    height: 33.33%;
+    font-weight: bold;
+    margin: 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fab-menu-item:hover {
+    color: #007bff;
+}
+
+/* ================= MOBILE PHONE VERSION ====================*/
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80vw !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .vizbar {
+        width: 80vw !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100vw !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+
+    .vizbar {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        width: 100vw !important;
+    }
+}
+
+/*ensure that leaflet padding is 0*/
+.leaflet-container {
+    padding: 0;
+}
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner span {
+    margin-left: 8px;
+}
