@@ -15,30 +15,6 @@ If desired, the user can also download the entire data set.
 
 The website is optimized for Desktop and Mobile phones and slightly changes its layout and behavior depending on the viewport width. 
 
-# Contribution Statement
-Team Members: 
-- Alexander Schramm
-  - Implementation of filter components 
-  - Assembling presentation for milestone 1
-  - Design refinements
-
-- Karim Galal
-  - Visualization of initial website idea for Milestone 1
-  - cleaning of the dataset and assembling the database
-  - implementation of charts
-
-- Leopold Schoenenberger
-  - Poster design and implementation
-  - Assembling presentation for milestone 1
-  - implementation of charts
-
-- Sven Glinz
-  - Design and implementation of Map Component, filters, global state context, styling
-  - Deployment 
-  - Writing of the backend 
-
-All: Writing of the report 
-
 # Dependencies / Installation: 
 
 Run this project locally by cloning the repository and running: (make sure to have docker installed)
